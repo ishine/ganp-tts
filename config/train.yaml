@@ -1,0 +1,26 @@
+path:
+  ckpt_path: "/data/FastSpeech2-master/output/ckpt/biaobei_22050_textgrid_3_hifiganv3_gesw0x006"
+  log_path: "/data/FastSpeech2-master/output/log/biaobei_22050_textgrid_3_hifiganv3_gesw0x006"
+  result_path: "/data/FastSpeech2-master/output/result/biaobei_22050_textgrid_3_hifiganv3_gesw0x006"
+optimizer:
+  batch_size: 16
+  des_w: 1.0
+  ges_w: 0.006
+  gan_start: 15000
+  embloss: 200.0
+  wenet_embloss: 200.0
+  precep_loss: 0.19
+  betas: [0.9, 0.98]
+  eps: 0.000000001
+  weight_decay: 0.0
+  grad_clip_thresh: 1.0
+  grad_acc_step: 1
+  warm_up_step: 4000
+  anneal_steps: [300000, 400000, 500000]
+  anneal_rate: 0.3
+step:
+  total_step: 100000
+  log_step: 100
+  synth_step: 1000
+  val_step: 1000
+  save_step: 5000
